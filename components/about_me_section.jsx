@@ -36,7 +36,7 @@ const About_me_section = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 0.5 }}
                 >
-                    Hi! I'm Jonathan, a web developer passionate about crafting digital 
+                    Hi! I&apos;m Jonathan, a web developer passionate about crafting digital 
                     experiences. With expertise in React, Firebase, and Tailwind CSS, 
                     I enjoy translating ideas into functional code. My aim is to blend aesthetics with
                     functionality to design modern and appealing web applications. 
