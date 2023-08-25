@@ -27,7 +27,7 @@ const About_me_section = () => {
                     transition={{ duration: 1, delay: 0.3 }}
                     className='text-9xl font-bold'
                 >
-                    i'm Jona
+                    i&apos;m Jona
                 </motion.h1>
             <div className='flex mt-10/100   '>
                 <motion.p 
