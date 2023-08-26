@@ -6,7 +6,7 @@ const { motion } = require("framer-motion");
 const About_me_section = () => {
     return (
         <section className='text-md text-primary p-12/100'>
-            <motion.p className='hover:text-gray-800 transition duration-500 cursor-pointer'
+            <motion.p onClick={reverse} className='hover:text-gray-800 transition duration-500 cursor-pointer'
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 2 }}>
@@ -27,7 +27,7 @@ const About_me_section = () => {
                     transition={{ duration: 1, delay: 0.3 }}
                     className='text-9xl font-bold'
                 >
-                    i&apos;m Jona
+                    im Jona
                 </motion.h1>
             <div className='flex mt-10/100   '>
                 <motion.p 
