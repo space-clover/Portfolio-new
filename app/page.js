@@ -12,7 +12,6 @@ export default function Home() {
   };
 
   const onAnimationFinish = () => {
-    // Cambia el estado para indicar que la animación terminó
     setAnimationFinished(true);
   };
 
