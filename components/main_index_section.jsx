@@ -15,14 +15,14 @@ const Main_index_section = () => {
                     </nav>
                 </header>
                 <div className='flex w-full mt-5/100 p-1/100'>
-                    <div className='w-50/100 flex flex-col justify-center '>
+                    <div className='w-50/100 flex flex-col justify-cente '>
                         <h1 className='text-7xl font-bold ml-10/100' >Skills and proyects
                         </h1>
                         <p></p>
-                        <p className=' font-semibold ml-13/100 mt-8/100'>About</p>
-                        <p className=' font-semibold ml-13/100 mt-3/100'>Skills section</p>
-                        <p className=' font-semibold ml-13/100 mt-3/100'>My Proyects</p>
-                        <div className='flex justify-around px-35/100 mt-10/100'> 
+                        <p className=' flex items-center font-semibold ml-13/100 mt-8/100'> <div  className='border-2 border-blue-700 w-6 mr-2 rounded-3xl' /> About</p>
+                        <p className=' flex items-center font-semibold ml-13/100 mt-3/100'> <div  className='border-2 border-blue-700 w-6 mr-2 rounded-3xl' />Skills section</p>
+                        <p className=' flex items-center font-semibold ml-13/100 mt-3/100'> <div  className='border-2 border-blue-700 w-6 mr-2 rounded-3xl' />My Proyects</p>
+                        <div className='flex justify-around  px-35/100 mt-55/100'> 
                             <FaLinkedin className=' cursor-pointer hover:text-blue-800 text-3xl' />
                             <FaGithub className=' cursor-pointer hover:text-black text-3xl' />
                             <FaClipboard className=' cursor-pointer hover:text-gray-700 text-3xl' />
