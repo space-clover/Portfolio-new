@@ -9,7 +9,7 @@ const ProyectCard = ({ titulo, descripcion, etiquetas, IMG }) => {
     };
 
     return (
-        <motion.div className='flex w-full h-auto p-4 border border-black rounded-xl'> 
+        <motion.div className='flex w-full h-auto p-4 border border-black rounded-xl my-2'> 
             <div className="w-full px-2 flex items-center justify-center"> {IMG} </div>
             <div>
                 <h3 className='text-lg flex items-center text-gray-800 font-bold'>{titulo} <FaArrowUp className=' text-xs ml-2'/> </h3>
