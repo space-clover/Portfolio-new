@@ -3,7 +3,7 @@ import React, {useState} from 'react'
 import { FaAd, FaClipboard, FaClock, FaCss3, FaFigma, FaGit, FaGitAlt, FaGithub, FaHtml5, FaLinkedin, FaSpotify, FaUser } from 'react-icons/fa';
 const { motion } = require("framer-motion");
 import ProyectCard from './Proyect_card';
-import { IconName, SiAxios, SiJavascript, SiReact, SiTailwindcss } from "react-icons/si";
+import { IconName, SiAxios, SiFramer, SiJavascript, SiReact, SiTailwindcss } from "react-icons/si";
 const Main_index_section = ({ reverseAnimation }) => {
     const etiquetasProyecto1 = ["Etiqueta 1", "Etiqueta 2"];
     const [isAnimating, setIsAnimating] = useState(false);
@@ -22,6 +22,8 @@ const Main_index_section = ({ reverseAnimation }) => {
     };
     const varianfunctionforbar2 = () => {
         setIsAnimating2(prevState => !prevState);
+    
+        
     };
     const varianfunctionforbar3 = () => {
         setIsAnimating3(prevState => !prevState);
@@ -30,6 +32,7 @@ const Main_index_section = ({ reverseAnimation }) => {
         initial: { width: "54px" },
         animate: { width: "100px" },
     };
+
 
 
 
@@ -54,7 +57,7 @@ const Main_index_section = ({ reverseAnimation }) => {
                         >Skills and proyects
                         </motion.h1>
                         <p></p>
-                        <motion.div className="ml-13/100 mt-10/100  "
+                        <motion.div className="ml-13/100 mt-vh-5  "
                             initial={{ opacity: 0, y: -20 }}
                             animate={isReversed ? { opacity: 0, y: -20 } :{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay:0.5 }}>
@@ -86,7 +89,7 @@ const Main_index_section = ({ reverseAnimation }) => {
                                 /> My Projects
                             </div>
                         </motion.div>
-                        <motion.div className='flex justify-around  px-35/100 mt-25/100'
+                        <motion.div className='flex justify-around  px-35/100 mt-vh-35'
                             initial={{ opacity: 0, y: 20 }}
                             animate={ isReversed ? { opacity: 0, y: 20 } :{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8 }}>
@@ -108,56 +111,63 @@ const Main_index_section = ({ reverseAnimation }) => {
                         I'm dedicated 
                         to turning innovative ideas into reality. Let's collaborate and bring your web projects to life with a touch of creativity and a 
                         dash of technology! Feel free to modify this text to match your personal style and preferences.
+                        Some tecnologies with I work are:
                         </p>
-                        <ul className='flex flex-wrap pt-8 justify-around '>
-                        <div className="relative inline-block hover:text-orange-600 transition duration-600">
-                            <FaHtml5 className='text-9xl'/>
-                            <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-100 transition duration-700">
-                                <span className="bg-gray-800 bg-opacity-60 text-white p-2 rounded"> HTML5 </span>
-                            </div>
-                        </div>
-                        <div className="relative inline-block hover:text-blue-600 transition duration-600">
-                            <FaCss3 className='text-9xl'/>
-                            <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-100 transition duration-700">
-                                <span className="bg-gray-800 bg-opacity-60 text-white p-2 rounded"> CSS3 </span>
-                            </div>
-                        </div>
-                        <div className="relative inline-block hover:text-cyan-600 transition duration-600">
-                            <SiTailwindcss className='text-9xl'/>
-                            <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-100 transition duration-700">
-                                <span className="bg-gray-800 bg-opacity-60 text-white p-2 rounded"> Tailwind CSS </span>
-                            </div>
-                        </div>
-                        <div className="relative inline-block hover:text-yellow-600 transition duration-600">
-                            <SiJavascript className='text-9xl'/>
-                            <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-100 transition duration-700">
-                                <span className="bg-gray-800 bg-opacity-60 text-white p-2 rounded"> Javascript </span>
-                            </div>
-                        </div>
-                        <div className="relative inline-block hover:text--700 transition duration-600">
-                            <SiReact className='text-9xl'/>
-                            <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-100 transition duration-700">
-                                <span className="bg-gray-800 bg-opacity-60 text-white p-2 rounded"> React/Next </span>
-                            </div>
-                        </div>
-                        <div className="relative inline-block hover:text-purple-600 transition duration-600">
-                            <FaFigma className='text-9xl'/>
-                            <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-100 transition duration-700">
-                                <span className="bg-gray-800 bg-opacity-60 text-white p-2 rounded"> Figma </span>
-                            </div>
-                        </div>
-                        <div className="relative inline-block hover:text-orange-600 transition duration-600">
-                            <FaGitAlt className='text-9xl'/>
-                            <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-100 transition duration-700">
-                                <span className="bg-gray-800 bg-opacity-60 text-white p-2 rounded"> GIT </span>
-                            </div>
-                        </div>
-                        <div className="relative inline-block hover:text-purple-500 transition duration-600">
-                            <SiAxios className='text-9xl'/>
-                            <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-100 transition duration-700">
-                                <span className="bg-gray-800 bg-opacity-60 text-white p-2 rounded"> AXIOS </span>
-                            </div>
-                        </div>
+                        <ul className='flex flex-wrap pt-8 justify-around ' id='myskills'>
+                            <li className="relative inline-block hover:text-orange-600 transition duration-600">
+                                <FaHtml5 className='text-9xl'/>
+                                <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-100 transition duration-700">
+                                    <span className="bg-gray-800 bg-opacity-60 text-white p-2 rounded"> HTML5 </span>
+                                </div>
+                            </li>
+                            <li className="relative inline-block hover:text-blue-600 transition duration-600">
+                                <FaCss3 className='text-9xl'/>
+                                <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-100 transition duration-700">
+                                    <span className="bg-gray-800 bg-opacity-60 text-white p-2 rounded"> CSS3 </span>
+                                </div>
+                            </li>
+                            <li className="relative inline-block hover:text-cyan-600 transition duration-600">
+                                <SiTailwindcss className='text-9xl'/>
+                                <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-100 transition duration-700">
+                                    <span className="bg-gray-800 bg-opacity-60 text-white p-2 rounded"> Tailwind CSS </span>
+                                </div>
+                            </li>
+                            <li className="relative inline-block hover:text-yellow-500 transition duration-600">
+                                <SiJavascript className='text-9xl'/>
+                                <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-100 transition duration-700">
+                                    <span className="bg-gray-800 bg-opacity-60 text-white p-2 rounded"> Javascript </span>
+                                </div>
+                            </li>
+                            <li className="relative inline-block hover:text-blue-900 transition duration-600">
+                                <SiReact className='text-9xl'/>
+                                <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-100 transition duration-700">
+                                    <span className="bg-gray-800 bg-opacity-60 text-white p-2 rounded"> React/Next </span>
+                                </div>
+                            </li>
+                            <li className="relative inline-block hover:text-purple-600 transition duration-600">
+                                <FaFigma className='text-9xl'/>
+                                <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-100 transition duration-700">
+                                    <span className="bg-gray-800 bg-opacity-60 text-white p-2 rounded"> Figma </span>
+                                </div>
+                            </li>
+                            <li className="relative inline-block hover:text-orange-600 transition duration-600">
+                                <FaGitAlt className='text-9xl'/>
+                                <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-100 transition duration-700">
+                                    <span className="bg-gray-800 bg-opacity-60 text-white p-2 rounded"> GIT </span>
+                                </div>
+                            </li>
+                            <li className="relative inline-block hover:text-purple-500 transition duration-600">
+                                <SiAxios className='text-9xl'/>
+                                <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-100 transition duration-700">
+                                    <span className="bg-gray-800 bg-opacity-60 text-white p-2 rounded"> AXIOS </span>
+                                </div>
+                            </li>
+                            <li className="relative inline-block hover:text-purple-500 transition duration-600">
+                                <SiFramer className='text-9xl'/>
+                                <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-100 transition duration-700">
+                                    <span className="bg-gray-800 bg-opacity-60 text-white p-2 rounded">framer-motion</span>
+                                </div>
+                            </li>
                         </ul>
                         <ul className='mt-10/100'>
                             <ProyectCard
