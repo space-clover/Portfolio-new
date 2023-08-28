@@ -1,10 +1,9 @@
 "use client";
 import React, {useState} from 'react'
-import { FaAd, FaClipboard, FaClock, FaCss3, FaFigma, FaGit, FaGithub, FaHtml5, FaLinkedin, FaSpotify, FaUser } from 'react-icons/fa';
+import { FaAd, FaClipboard, FaClock, FaCss3, FaFigma, FaGit, FaGitAlt, FaGithub, FaHtml5, FaLinkedin, FaSpotify, FaUser } from 'react-icons/fa';
 const { motion } = require("framer-motion");
 import ProyectCard from './Proyect_card';
 import { IconName, SiAxios, SiJavascript, SiReact, SiTailwindcss } from "react-icons/si";
-import Skill_card from './skill_card';
 const Main_index_section = ({ reverseAnimation }) => {
     const etiquetasProyecto1 = ["Etiqueta 1", "Etiqueta 2"];
     const [isAnimating, setIsAnimating] = useState(false);
@@ -28,14 +27,11 @@ const Main_index_section = ({ reverseAnimation }) => {
         setIsAnimating3(prevState => !prevState);
     };
     const animationVariants = {
-        initial: { width: "54px" }, // Ancho inicial
+        initial: { width: "54px" },
         animate: { width: "100px" },
     };
 
-    const skills = [
-        { icon: <Fa500Px />, texto: "Habilidad 1" },
-        { icon: <Fa500Px />, texto: "Habilidad 2" },
-    ];
+
 
     return (
         <section className=' flex flex-col justify-center w-full  text-gray-800  '>
@@ -114,16 +110,54 @@ const Main_index_section = ({ reverseAnimation }) => {
                         dash of technology! Feel free to modify this text to match your personal style and preferences.
                         </p>
                         <ul className='flex flex-wrap pt-8 justify-around '>
-                            {skills.map((skill, index) => (
-                                <SkillCard key={index} icon={skill.icon} texto={skill.texto} />
-                            ))}
-                            <FaCss3 className='text-9xl m-1'/>
-                            <SiTailwindcss className='text-9xl m-1'/>
-                            <SiJavascript className='text-9xl m-1'/>
-                            <FaFigma className='text-9xl m-1'/>
-                            <FaGit className='text-9xl m-1'/>
-                            <SiAxios className='text-9xl m-1'/>
-                            <SiReact className='text-9xl m-1'/>
+                        <div className="relative inline-block hover:text-orange-600 transition duration-600">
+                            <FaHtml5 className='text-9xl'/>
+                            <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-100 transition duration-700">
+                                <span className="bg-gray-800 bg-opacity-60 text-white p-2 rounded"> HTML5 </span>
+                            </div>
+                        </div>
+                        <div className="relative inline-block hover:text-blue-600 transition duration-600">
+                            <FaCss3 className='text-9xl'/>
+                            <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-100 transition duration-700">
+                                <span className="bg-gray-800 bg-opacity-60 text-white p-2 rounded"> CSS3 </span>
+                            </div>
+                        </div>
+                        <div className="relative inline-block hover:text-cyan-600 transition duration-600">
+                            <SiTailwindcss className='text-9xl'/>
+                            <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-100 transition duration-700">
+                                <span className="bg-gray-800 bg-opacity-60 text-white p-2 rounded"> Tailwind CSS </span>
+                            </div>
+                        </div>
+                        <div className="relative inline-block hover:text-yellow-600 transition duration-600">
+                            <SiJavascript className='text-9xl'/>
+                            <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-100 transition duration-700">
+                                <span className="bg-gray-800 bg-opacity-60 text-white p-2 rounded"> Javascript </span>
+                            </div>
+                        </div>
+                        <div className="relative inline-block hover:text--700 transition duration-600">
+                            <SiReact className='text-9xl'/>
+                            <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-100 transition duration-700">
+                                <span className="bg-gray-800 bg-opacity-60 text-white p-2 rounded"> React/Next </span>
+                            </div>
+                        </div>
+                        <div className="relative inline-block hover:text-purple-600 transition duration-600">
+                            <FaFigma className='text-9xl'/>
+                            <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-100 transition duration-700">
+                                <span className="bg-gray-800 bg-opacity-60 text-white p-2 rounded"> Figma </span>
+                            </div>
+                        </div>
+                        <div className="relative inline-block hover:text-orange-600 transition duration-600">
+                            <FaGitAlt className='text-9xl'/>
+                            <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-100 transition duration-700">
+                                <span className="bg-gray-800 bg-opacity-60 text-white p-2 rounded"> GIT </span>
+                            </div>
+                        </div>
+                        <div className="relative inline-block hover:text-purple-500 transition duration-600">
+                            <SiAxios className='text-9xl'/>
+                            <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-100 transition duration-700">
+                                <span className="bg-gray-800 bg-opacity-60 text-white p-2 rounded"> AXIOS </span>
+                            </div>
+                        </div>
                         </ul>
                         <ul className='mt-10/100'>
                             <ProyectCard
