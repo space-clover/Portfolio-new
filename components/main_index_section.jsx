@@ -50,7 +50,7 @@ const Main_index_section = ({ reverseAnimation }) => {
                                 <div className="border-2 border-blue-700 w-6 mr-2 rounded-3xl" /> My Projects
                             </div>
                         </motion.div>
-                        <motion.div className='flex justify-around  px-35/100 mt-55/100'
+                        <motion.div className='flex justify-around  px-35/100 mt-25/100'
                             initial={{ opacity: 0, y: 20 }}
                             animate={ isReversed ? { opacity: 0, y: 20 } :{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8 }}>
@@ -60,7 +60,7 @@ const Main_index_section = ({ reverseAnimation }) => {
                         </motion.div>
                     </div>
 
-                    <motion.div className='w-45/100 p-2/100 '
+                    <motion.div className='w-45/100 p-1/100 overflow-auto   max-h-vh-80'
                         initial={{ opacity: 0, x: 20 }}
                         animate={isReversed ? { opacity: 0, x: 20 } :{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, delay:0.7 }}>
@@ -74,6 +74,14 @@ const Main_index_section = ({ reverseAnimation }) => {
                         dash of technology! Feel free to modify this text to match your personal style and preferences.
                         </p>
                         <ul className='mt-10/100'>
+                            <ProyectCard
+                            titulo="Spotify Profile"
+                            descripcion="Web app for visualizin personalized Spotify data. 
+                            View your tops artis, top tracks, recently plyaed tracks, and detailed audifo infomration 
+                            about each track, created and save new playlist of reccomende tracks base 
+                            on your existin playlist and more"
+                            etiquetas={etiquetasProyecto1} 
+                            IMG = <FaSpotify className=' text-green-950 cursor-pointer hover:text-gray-700 text-7xl' /> />
                             <ProyectCard
                             titulo="Spotify Profile"
                             descripcion="Web app for visualizin personalized Spotify data. 

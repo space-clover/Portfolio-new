@@ -1,9 +1,15 @@
 import React from 'react';
 import {FaArrowUp } from 'react-icons/fa';
+const { motion } = require("framer-motion");
 
 const ProyectCard = ({ titulo, descripcion, etiquetas, IMG }) => {
+    const hoverAnimation = {
+        scale: 1.1,
+        transition: { duration: 0.3 },
+    };
+
     return (
-        <div className='flex w-full h-auto p-4 border border-black rounded-xl'> 
+        <motion.div className='flex w-full h-auto p-4 border border-black rounded-xl'> 
             <div className="w-full px-2 flex items-center justify-center"> {IMG} </div>
             <div>
                 <h3 className='text-lg flex items-center text-gray-800 font-bold'>{titulo} <FaArrowUp className=' text-xs ml-2'/> </h3>
@@ -14,7 +20,7 @@ const ProyectCard = ({ titulo, descripcion, etiquetas, IMG }) => {
                     ))}
                 </ul>
             </div>
-        </div>
+        </motion.div>
     );
 }
 
