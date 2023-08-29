@@ -1,5 +1,5 @@
 "use client";
-import React, {useState} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 import { FaAd, FaClipboard, FaClock, FaCss3, FaFigma, FaGit, FaGitAlt, FaGithub, FaHtml5, FaLinkedin, FaRegStickyNote, FaSpotify, FaUser } from 'react-icons/fa';
 const { motion, SwitchLayoutGroupContext } = require("framer-motion");
 import ProyectCard from './Proyect_card';
@@ -7,6 +7,7 @@ import { SiAxios, SiFirebase, SiFramer, SiJavascript, SiLivechat, SiNextdotjs, S
 import Skill_card from './Skill_card';
 import { WiDayCloudyGusts } from "react-icons/wi";
 import { AiFillLayout } from "react-icons/ai";
+
 const Main_index_section = ({ reverseAnimation }) => {
     const etiquetasProyecto1 = [  "Next.js","Axios","FontAwesome","Tailwind CSS","JavaScript","OpenWeatherMap API",];
     const etiquetasProyecto2 = [    "Next.js","Firebase (Authentication and Firestore)","FontAwesome","Tailwind CSS",];
@@ -15,6 +16,10 @@ const Main_index_section = ({ reverseAnimation }) => {
     const [isAnimating2, setIsAnimating2] = useState(false);
     const [isAnimating3, setIsAnimating3] = useState(false);
     const [isReversed, setIsReversed] = useState(false);
+    const targetRef1 = useRef(null);
+    const targetRef2 = useRef(null)
+    const targetRef3 = useRef(null)
+
     const reverse= () => {
         setIsReversed(!isReversed);
         setTimeout(() => {
@@ -23,24 +28,59 @@ const Main_index_section = ({ reverseAnimation }) => {
     };
 
     const varianfunctionforbar = () => {
-        setIsAnimating(prevState => !prevState);
-    };
+        setIsAnimating(prevState => !prevState);};
     const varianfunctionforbar2 = () => {
-        setIsAnimating2(prevState => !prevState);
-    
-        
-    };
+        setIsAnimating2(prevState => !prevState);};
     const varianfunctionforbar3 = () => {
-        setIsAnimating3(prevState => !prevState);
-    };
+        setIsAnimating3(prevState => !prevState);};
     const animationVariants = {
         initial: { width: "42px" },
-        animate: { width: "125px" },
-    };
+        animate: { width: "125px" },};
 
-
-
-
+    useEffect(() => {
+        const options = { root: null, rootMargin: '0px', threshold: 0.5,  };
+        const observer1 = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    setIsAnimating(true)
+                } else {
+                    setIsAnimating(false)
+                }
+            });
+        }, options);
+            const observer2 = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    setIsAnimating2(true)
+                } else {
+                    setIsAnimating2(false)
+                }
+            });
+        }, options);
+        const observer3 = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    setIsAnimating3(true)
+                } else {
+                    setIsAnimating3(false)
+                }
+            });
+        }, options);
+        if (targetRef1.current) {
+            observer1.observe(targetRef1.current);}
+        if (targetRef2.current) {
+            observer2.observe(targetRef2.current);}
+        if (targetRef3.current) {
+            observer3.observe(targetRef3.current);}
+        return () => {
+            if (targetRef1.current) {
+                observer1.unobserve(targetRef1.current);}
+            if (targetRef2.current) {
+                observer2.unobserve(targetRef2.current);}
+            if (targetRef3.current) {
+                observer3.unobserve(targetRef3.current);}
+        };
+        }, []);
     return (
         <section className=' flex flex-col justify-center w-full   text-slate-800 '>
                 <motion.header className='hidden lg:block w-full h-auto bg-slate-800 '
@@ -57,8 +97,7 @@ const Main_index_section = ({ reverseAnimation }) => {
                         <motion.h1 className='lg:text-7xl text-6xl font-bold px-5 lg:ml-10/100' 
                             initial={{ opacity: 0, x: -20 }}
                             animate={isReversed ? { opacity: 0, x: -20 } :{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.8 }}
-                        >Skills and proyects
+                            transition={{ duration: 0.8 }}>Skills and proyects
                         </motion.h1>
                         <motion.p 
                         className='lg:w-60/100 text-md text-slate-600 lg:ml-14/100 ml-5/100  mt-4  '
@@ -73,7 +112,7 @@ const Main_index_section = ({ reverseAnimation }) => {
                                 animate={isReversed ? { opacity: 0, y: -20 } :{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.4, delay:0.5 }}>
                                 <div className="items-center font-semibold w-max-auto flex p-1 cursor-pointer" 
-                                onMouseEnter={varianfunctionforbar} onMouseLeave={varianfunctionforbar}>
+                                onMouseEnter={varianfunctionforbar} onMouseLeave={varianfunctionforbar} >
                                     <motion.div className="border-2 border-blue-900 w-8 mr-2 rounded-3xl" 
                                     initial="initial"
                                     animate={isAnimating ? "animate" : "initial"}
@@ -116,7 +155,7 @@ const Main_index_section = ({ reverseAnimation }) => {
                         animate={isReversed ? { opacity: 0, x: 20 } :{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, delay:0.7 }}>
                         <h3 className='font-extrabold mb-4 lg:hidden px-2/100' >ABOUT</h3>
-                        <p className=' text-justify px-2/100 '>
+                        <p className=' text-justify px-2/100' ref={targetRef1} >
                         Hey there!, a web developer fueled by a passion for crafting visually appealing
                         and dynamic digital experiences. Proficient in technologies like Tailwind CSS, Next.js, Axios and Framer Motion, I specialize in
                         creating seamless user interfaces that captivate and engage. With a love for clean code and an eye for design, 
@@ -127,7 +166,7 @@ const Main_index_section = ({ reverseAnimation }) => {
                         Some tecnologies with I work are:
                         </p>
                         <h3 className='font-extrabold my-4 lg:hidden px-2/100' >SKILLS</h3>
-                        <ul className='flex flex-wrap pt-8 justify-around w-full bg-neutral lg:justify-between ' id='myskills'>
+                        <ul className='flex flex-wrap pt-8 justify-around w-full bg-neutral lg:justify-between ' id='myskills' ref={targetRef2}>
                             <li className="relative inline-block hover:text-orange-600 transition mb-2 duration-600">
                                 <FaHtml5 className='lg:text-9xl text-8xl'/>
                                 <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-100 transition duration-700">
@@ -219,7 +258,7 @@ const Main_index_section = ({ reverseAnimation }) => {
                                 select colors, typography, and graphic elements cohesively and harmoniously. This involves understanding 
                                 how to combine visual elements to convey the desired message and create a strong visual identity"/>
                         </ul>
-                        <ul className='pt-vh-1 bg-neutral'>
+                        <ul className='pt-vh-1 bg-neutral ' ref={targetRef3}>
                             <ProyectCard
                             titulo="Wheater app"
                             descripcion="This is a React-based Weather Web App that enables users to retrieve current weather 
