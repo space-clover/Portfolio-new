@@ -9,7 +9,7 @@ const ProyectCard = ({ titulo, descripcion, etiquetas, IMG, src, alt }) => {
     };
 
     return (
-        <motion.div className='flex w-full h-auto px-4 py-3  hover:bg-slate-400 hover:bg-opacity-10  
+        <motion.div className='lg:flex w-full h-auto px-4 py-3  hover:bg-slate-400 hover:bg-opacity-10  
         hover:shadow-md hover:shadow-slate-400  transition duration-500 rounded-xl my-2'> 
             <div className="w-1/4 px-2 flex items-center justify-center"> {IMG}  </div>
             <div className='w-3/4'>
