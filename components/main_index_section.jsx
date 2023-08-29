@@ -1,11 +1,12 @@
 "use client";
 import React, {useState} from 'react'
-import { FaAd, FaClipboard, FaClock, FaCss3, FaFigma, FaGit, FaGitAlt, FaGithub, FaHtml5, FaLinkedin, FaSpotify, FaUser } from 'react-icons/fa';
-const { motion } = require("framer-motion");
+import { FaAd, FaClipboard, FaClock, FaCss3, FaFigma, FaGit, FaGitAlt, FaGithub, FaHtml5, FaLinkedin, FaRegStickyNote, FaSpotify, FaUser } from 'react-icons/fa';
+const { motion, SwitchLayoutGroupContext } = require("framer-motion");
 import ProyectCard from './Proyect_card';
 import { SiAxios, SiFirebase, SiFramer, SiJavascript, SiLivechat, SiNextdotjs, SiReact, SiTailwindcss, SiWordpress } from "react-icons/si";
 import Skill_card from './Skill_card';
 import { WiDayCloudyGusts } from "react-icons/wi";
+import { AiFillLayout } from "react-icons/ai";
 const Main_index_section = ({ reverseAnimation }) => {
     const etiquetasProyecto1 = [  "Next.js","Axios","FontAwesome","Tailwind CSS","JavaScript","OpenWeatherMap API",];
     const etiquetasProyecto2 = [    "Next.js","Firebase (Authentication and Firestore)","FontAwesome","Tailwind CSS",];
@@ -41,58 +42,60 @@ const Main_index_section = ({ reverseAnimation }) => {
 
 
     return (
-        <section className=' flex flex-col justify-center w-full  text-gray-800  '>
-                <header className='w-full h-auto'>
-                    <motion.nav className=' font-bold w-full flex justify-around px-15/100 py-1/100 border-b border-gray-800'
+        <section className=' flex flex-col justify-center w-full  text-slate-800 '>
+                <motion.header className='hidden lg:block w-full h-auto bg-slate-800 '
                         initial={{ opacity: 0, y: -20 }}
                         animate={isReversed ? { opacity: 0, y: -20 } :{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}>
-                            <p className=' cursor-pointer flex items-center' onClick={reverse} >About me <FaUser className='ml-1' /></p>
-                            <p>Thoughts and Notes</p>
-                    </motion.nav>
-                </header>
-                <div className='ml-2/100 flex w-full mt-3/100 p-1/100'>
-                    <div className='w-45/100 flex flex-col justify-cente '>
-                        <motion.h1 className='text-7xl font-bold ml-10/100' 
+                    <nav className=' font-bold w-full flex justify-around px-15/100  text-neutral  py-1/100 '>
+                            <p className=' cursor-pointer flex items-center hover:opacity-80 transition duration-500' onClick={reverse} >About me <FaUser className='ml-1' /></p>
+                            <p className=' cursor-pointer flex items-center hover:opacity-80 transition duration-500'>Thoughts and Notes  <FaRegStickyNote className='ml-1' /></p>
+                    </nav>
+                </motion.header>
+                <div className='ml-2/100 lg:flex w-full mt-3/100 p-1/100'>
+                    <div className='lg:w-45/100 w-full flex flex-col justify-center font-bold '>
+                        <motion.h1 className='lg:text-7xl text-6xl font-bold px-5 lg:ml-10/100' 
                             initial={{ opacity: 0, x: -20 }}
                             animate={isReversed ? { opacity: 0, x: 0 } :{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8 }}
                         >Skills and proyects
                         </motion.h1>
-                        <p></p>
-                        <motion.div className="ml-13/100 mt-vh-5  "
-                            initial={{ opacity: 0, y: -20 }}
-                            animate={isReversed ? { opacity: 0, y: -20 } :{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8, delay:0.5 }}>
-                            <div className="items-center font-semibold w-max-auto flex p-1 cursor-pointer" 
-                            onMouseEnter={varianfunctionforbar} onMouseLeave={varianfunctionforbar}>
-                                <motion.div className="border-2 border-blue-700 w-8 mr-2 rounded-3xl" 
-                                initial="initial"
-                                animate={isAnimating ? "animate" : "initial"}
-                                variants={animationVariants}
-                                transition={{ duration: 0.5 }}
-                                /> About
-                            </div>
-                            <div className="flex items-center font-semibold mt-3/100 p-1 cursor-pointer"
-                            onMouseEnter={varianfunctionforbar2} onMouseLeave={varianfunctionforbar2}>
-                            <motion.div className="border-2 border-blue-700 w-8 mr-2 rounded-3xl" 
-                                initial="initial"
-                                animate={isAnimating2 ? "animate" : "initial"}
-                                variants={animationVariants}
-                                transition={{ duration: 0.5 }}
-                                /> Skills 
-                            </div>
-                            <div className="flex items-center font-semibold mt-3/100 p-1 cursor-pointer"
-                            onMouseEnter={varianfunctionforbar3} onMouseLeave={varianfunctionforbar3}>
-                            <motion.div className="border-2 border-blue-700 w-8 mr-2 rounded-3xl" 
-                                initial="initial"
-                                animate={isAnimating3 ? "animate" : "initial"}
-                                variants={animationVariants}
-                                transition={{ duration: 0.5 }}
-                                />Projects
-                            </div>
-                        </motion.div>
-                        <motion.div className='flex justify-around  px-35/100 mt-vh-35'
+                        <p className='text-sm '>Skilled in crafting captivating web applications and dynamic interfaces.</p>
+                        <ul className='lg:block hidden'>
+                            <motion.div className="ml-13/100 mt-vh-5  "
+                                initial={{ opacity: 0, y: -20 }}
+                                animate={isReversed ? { opacity: 0, y: -20 } :{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.4, delay:0.5 }}>
+                                <div className="items-center font-semibold w-max-auto flex p-1 cursor-pointer" 
+                                onMouseEnter={varianfunctionforbar} onMouseLeave={varianfunctionforbar}>
+                                    <motion.div className="border-2 border-blue-900 w-8 mr-2 rounded-3xl" 
+                                    initial="initial"
+                                    animate={isAnimating ? "animate" : "initial"}
+                                    variants={animationVariants}
+                                    transition={{ duration: 0.4 }}
+                                    /> About
+                                </div>
+                                <div className="flex items-center font-semibold mt-3/100 p-1 cursor-pointer"
+                                onMouseEnter={varianfunctionforbar2} onMouseLeave={varianfunctionforbar2}>
+                                <motion.div className="border-2 border-blue-900  w-8 mr-2 rounded-3xl" 
+                                    initial="initial"
+                                    animate={isAnimating2 ? "animate" : "initial"}
+                                    variants={animationVariants}
+                                    transition={{ duration: 0.4 }}
+                                    /> Skills 
+                                </div>
+                                <div className="flex items-center font-semibold mt-3/100 p-1 cursor-pointer"
+                                onMouseEnter={varianfunctionforbar3} onMouseLeave={varianfunctionforbar3}>
+                                <motion.div className="border-2 border-blue-900  w-8 mr-2 rounded-3xl" 
+                                    initial="initial"
+                                    animate={isAnimating3 ? "animate" : "initial"}
+                                    variants={animationVariants}
+                                    transition={{ duration: 0.4 }}
+                                    />Projects
+                                </div>
+                                </motion.div>
+                            </ul>
+                        <motion.div className='flex justify-around pr-40/100  lg:px-30/100 my-vh-4 lg:mt-vh-35'
                             initial={{ opacity: 0, y: 20 }}
                             animate={ isReversed ? { opacity: 0, y: 20 } :{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8 }}>
@@ -216,8 +219,8 @@ const Main_index_section = ({ reverseAnimation }) => {
                             requests to OpenWeatherMap. The application uses state management via the useState hook to handle 
                             weather data, forecasts, highlights, and error messages. The user interface is divided 
                             into sections for search and current weather display, alongside a forecast and highlights section. "
-                            etiquetas={etiquetasProyecto1} 
-                            IMG = <WiDayCloudyGusts className='text-8xl'/>  />
+                            etiquetas={etiquetasProyecto1}   
+                            IMG = <WiDayCloudyGusts className='text-8xl  text-orange-900'/>  />
                             <ProyectCard
                             titulo="Chat app"
                             descripcion="Introducing an real-time chat application developed using Firebase as the 
@@ -225,7 +228,7 @@ const Main_index_section = ({ reverseAnimation }) => {
                             technologies of Next.js and Tailwind CSS, this application redefines the way users communicate.
                             Leveraging Firebase Realtime Database, messages are delivered and updated instantly across devices. "
                             etiquetas={etiquetasProyecto2} 
-                            IMG = <SiLivechat className='text-8xl'/>  />
+                            IMG = <SiLivechat className='text-7xl text-cyan-950'/>  />
                             <ProyectCard
                             titulo="Older Portfolio"
                             descripcion="Allow me to introduce my personal portfolio, a unique creation crafted using 
@@ -234,7 +237,7 @@ const Main_index_section = ({ reverseAnimation }) => {
                             flexibility of Tailwind CSS, 
                             I've achieved a modern and highly customized interface that seamlessly adapts to various devices.  "
                             etiquetas={etiquetasProyecto3} 
-                            IMG = <img src="./Resources/wheater.png" alt="" />  />
+                            IMG = <AiFillLayout className='text-8xl text-red-950 '/>  />
                             <ProyectCard
                             titulo="Spotify Profile"
                             descripcion="Web app for visualizin personalized Spotify data. 
