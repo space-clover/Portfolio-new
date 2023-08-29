@@ -13,7 +13,7 @@ export default function Home() {
   
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between bg-neutral ">
+    <main className="flex flex-col items-center justify-between bg-neutral ">
       {animationFinished ? (
         <Main_index_section reverseAnimation={onAnimationFinish} />
       ) : (

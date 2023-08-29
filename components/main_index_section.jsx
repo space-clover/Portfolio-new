@@ -99,7 +99,7 @@ const Main_index_section = ({ reverseAnimation }) => {
             } 
             
     return (
-        <section className=' flex flex-col justify-center w-full text-tertiary'>
+        <section className=' flex flex-col  justify-center w-full text-tertiary'>
                 <motion.header className='hidden lg:flex absolute top-5 left-5  w-full h-auto'
                         initial={{ opacity: 0, y: -20 }}
                         animate={isReversed ? { opacity: 0, y: -20 } :{ opacity: 1, y: 0 }}
@@ -166,7 +166,7 @@ const Main_index_section = ({ reverseAnimation }) => {
                                 </div>
                             </motion.div>
                         </ul>
-                        <motion.div className='flex justify-around pr-50/100  lg:px-30/100 my-vh-7 lg:mt-vh-35'
+                        <motion.div className='flex justify-around pr-50/100  lg:px-30/100 my-vh-7 lg:mt-vh-41'
                             initial={{ opacity: 0, y: 20 }}
                             animate={ isReversed ? { opacity: 0, y: 20 } :{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8 }}>
