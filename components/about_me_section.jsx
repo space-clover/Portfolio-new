@@ -13,7 +13,7 @@ const About_me_section = ({ onAnimationFinish }) => {
     };
 
     return (
-        <section className='text-md text-primary w-85/100 px-2/100 py-4/100 lg:p-12/100'>
+        <section className='text-md text-primary bg-neutral w-85/100 px-2/100 py-4/100 lg:p-12/100'>
             <motion.p onClick={reverse} className='hover:text-gray-800 transition duration-500 cursor-pointer'
                 initial={{ opacity: 0 }}
                 animate={isReversed ? { opacity: 0 } :{ opacity: 1 }}
@@ -67,9 +67,6 @@ const About_me_section = ({ onAnimationFinish }) => {
                             transition={{ duration: 1, delay: -0.5  }}
                         >  <FaLinkedin className=' text-4xl' /> </motion.a>
                 </div>
-
-                        
-
             </div>
         </section>
     )
