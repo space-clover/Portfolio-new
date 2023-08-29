@@ -34,7 +34,7 @@ const Main_index_section = ({ reverseAnimation }) => {
         setIsAnimating3(prevState => !prevState);
     };
     const animationVariants = {
-        initial: { width: "54px" },
+        initial: { width: "42px" },
         animate: { width: "125px" },
     };
 
@@ -42,7 +42,7 @@ const Main_index_section = ({ reverseAnimation }) => {
 
 
     return (
-        <section className=' flex flex-col justify-center w-full  text-slate-800 '>
+        <section className=' flex flex-col justify-center w-full   text-slate-800 '>
                 <motion.header className='hidden lg:block w-full h-auto bg-slate-800 '
                         initial={{ opacity: 0, y: -20 }}
                         animate={isReversed ? { opacity: 0, y: -20 } :{ opacity: 1, y: 0 }}
@@ -52,17 +52,21 @@ const Main_index_section = ({ reverseAnimation }) => {
                             <p className=' cursor-pointer flex items-center hover:opacity-80 transition duration-500'>Thoughts and Notes  <FaRegStickyNote className='ml-1' /></p>
                     </nav>
                 </motion.header>
-                <div className='ml-2/100 flex  lg:flex-row flex-col w-full mt-3/100 p-1/100'>
+                <div className='lg:ml-2/100 flex  lg:flex-row flex-col w-full mt-3/100 p-1/100'>
                     <div className='lg:w-45/100 w-full flex flex-col justify-center font-bold '>
                         <motion.h1 className='lg:text-7xl text-6xl font-bold px-5 lg:ml-10/100' 
                             initial={{ opacity: 0, x: -20 }}
-                            animate={isReversed ? { opacity: 0, x: 0 } :{ opacity: 1, x: 0 }}
+                            animate={isReversed ? { opacity: 0, x: -20 } :{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8 }}
                         >Skills and proyects
                         </motion.h1>
-                        <p className='text-md text-slate-600 lg:ml-14/100 ml-5/100  mt-4  '>
+                        <motion.p 
+                        className='lg:w-60/100 text-md text-slate-600 lg:ml-14/100 ml-5/100  mt-4  '
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={isReversed ? { opacity: 0, x: -20 } :{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8, delay:0.6 }}>
                         Skilled in crafting captivating web applications 
-                        and dynamic interfaces.</p>
+                        and dynamic interfaces.</motion.p>
                         <ul className='lg:block hidden'>
                             <motion.div className="ml-13/100 mt-vh-5  "
                                 initial={{ opacity: 0, y: -20 }}
@@ -107,11 +111,12 @@ const Main_index_section = ({ reverseAnimation }) => {
                         </motion.div>
                     </div>
 
-                    <motion.div className='lg:w-45/100 w-93/100 flex flex-col items-center overflow-auto scrollbar-none   max-h-vh-80'
+                    <motion.div className='lg:w-45/100 w-full flex flex-col lg:overflow-auto scrollbar-none max-h-vh-80'
                         initial={{ opacity: 0, x: 20 }}
                         animate={isReversed ? { opacity: 0, x: 20 } :{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, delay:0.7 }}>
-                        <p className=' text-justify'>
+                        <h3 className='font-extrabold mb-4 lg:hidden px-2/100' >ABOUT</h3>
+                        <p className=' text-justify px-2/100 '>
                         Hey there!, a web developer fueled by a passion for crafting visually appealing
                         and dynamic digital experiences. Proficient in technologies like Tailwind CSS, Next.js, Axios and Framer Motion, I specialize in
                         creating seamless user interfaces that captivate and engage. With a love for clean code and an eye for design, 
@@ -121,7 +126,8 @@ const Main_index_section = ({ reverseAnimation }) => {
                         dash of technology! Feel free to modify this text to match your personal style and preferences.
                         Some tecnologies with I work are:
                         </p>
-                        <ul className='flex flex-wrap pt-8 justify-around  lg:justify-between ' id='myskills'>
+                        <h3 className='font-extrabold my-4 lg:hidden px-2/100' >SKILLS</h3>
+                        <ul className='flex flex-wrap pt-8 justify-around w-full bg-neutral lg:justify-between ' id='myskills'>
                             <li className="relative inline-block hover:text-orange-600 transition mb-2 duration-600">
                                 <FaHtml5 className='lg:text-9xl text-8xl'/>
                                 <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-100 transition duration-700">
@@ -213,7 +219,7 @@ const Main_index_section = ({ reverseAnimation }) => {
                                 select colors, typography, and graphic elements cohesively and harmoniously. This involves understanding 
                                 how to combine visual elements to convey the desired message and create a strong visual identity"/>
                         </ul>
-                        <ul className='mt-vh-1'>
+                        <ul className='pt-vh-1 bg-neutral'>
                             <ProyectCard
                             titulo="Wheater app"
                             descripcion="This is a React-based Weather Web App that enables users to retrieve current weather 
