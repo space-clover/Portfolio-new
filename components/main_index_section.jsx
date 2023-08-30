@@ -170,8 +170,8 @@ const Main_index_section = ({ reverseAnimation }) => {
                             initial={{ opacity: 0, y: 20 }}
                             animate={ isReversed ? { opacity: 0, y: 20 } :{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8 }}>
-                            <a href=""><FaLinkedin className=' cursor-pointer hover:text-blue-800 text-3xl' /></a>
-                            <a href=""><FaGithub className=' cursor-pointer hover:text-black text-3xl' /></a>
+                            <a href="https://www.linkedin.com/in/jefry-jonathan-mejia-176476240/"><FaLinkedin className=' cursor-pointer hover:text-blue-800 text-3xl' /></a>
+                            <a href="https://github.com/space-clover"><FaGithub className=' cursor-pointer hover:text-black text-3xl' /></a>
                             <a href=""><FaClipboard className=' cursor-pointer hover:text-gray-700 text-3xl' /></a>
                         </motion.div>
                     </div>
@@ -192,7 +192,7 @@ const Main_index_section = ({ reverseAnimation }) => {
                         Some technologies I work with are:
                         </p>
                         <h3 className='font-extrabold my-4 lg:hidden px-2/100' >SKILLS</h3>
-                        <ul className='flex flex-wrap pt-8 justify-around w-full bg-neutral lg:justify-between target2' id='myskills' ref={targetRef2}>
+                        <ul className='flex flex-wrap pt-8 justify-around w-full bg-neutral lg:justify-between target2' id='myskills' >
                             <li className="relative inline-block hover:text-orange-600 transition mb-2 duration-600">
                                 <FaHtml5 className='lg:text-9xl text-8xl'/>
                                 <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-100 transition duration-700">
@@ -259,19 +259,19 @@ const Main_index_section = ({ reverseAnimation }) => {
                                     <span className="bg-gray-800 bg-opacity-60 text-white p-2 rounded">Wordpress</span>
                                 </div>
                             </li>
-                            <li className="relative inline-block hover:text-black transition mb-2 duration-600">
+                            <li   className="relative inline-block hover:text-black transition mb-2 duration-600">
                                 <SiNextdotjs className='lg:text-9xl text-8xl'/>
                                 <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-100 transition duration-700">
                                     <span className="bg-gray-800 bg-opacity-60 text-white p-2 rounded">Next.js</span>
                                 </div>
                             </li>
-                            <Skill_card
+                            <Skill_card 
                                 titulo="Responsive Design"
                                 descripcion="The ability to create designs that adapt effectively to a wide range of screen sizes 
                                 and devices, ensuring a consistent visual and functional experience across devices, including mobile 
                                 phones, tablets, desktop computers, and high-resolution screens. This involves using CSS media queries, rearranging elements based on available space,
                                 and optimizing images and multimedia content for various resolutions."/>
-                                
+                                <div ref={targetRef2} />
                                 <Skill_card
                                 titulo="User Experience (UX)"
                                 descripcion="Having an understanding of the fundamentals of User Experience (UX) and the ability 

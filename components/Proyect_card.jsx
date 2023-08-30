@@ -15,7 +15,7 @@ const ProyectCard = ({ titulo, descripcion, etiquetas, IMG, src, alt }) => {
             <div className='lg:w-3/4'>
                 <h3 className='text-lg py-1/100 flex items-center text-dark font-bold'>{titulo} 
                 <FaLink className=' text-md mx-2 hover:text-gray-500 transition cursor-pointer duration-500'/> 
-                <FaGithub className=' text-xl mx-1 hover:text-black transition cursor-pointer duration-500'/> </h3>
+                <a href="https://github.com/space-clover"> <FaGithub className=' text-xl mx-1 hover:text-black transition cursor-pointer duration-500'/></a> </h3>
                 <p className='text-sm text-primary mt-2 text-justify' >{descripcion}</p>
                 <ul className='flex  w-full mt-3 flex-wrap '>
                     {etiquetas.map((etiqueta, index) => (
