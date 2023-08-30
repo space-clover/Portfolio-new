@@ -186,8 +186,8 @@ const Main_index_section = ({ reverseAnimation }) => {
                         and dynamic digital experiences. Proficient in technologies like Tailwind CSS, Next.js, Axios and Framer Motion, I specialize in
                         creating seamless user interfaces that captivate and engage. With a love for clean code and an eye for design, 
                         <br/> <br/> 
-                        I'm dedicated 
-                        to turning innovative ideas into reality. Let's collaborate and bring your web projects to life with a touch of creativity and a 
+                        Im dedicated 
+                        to turning innovative ideas into reality. Lets collaborate and bring your web projects to life with a touch of creativity and a 
                         dash of technology! Feel free to modify this text to match your personal style and preferences.
                         Some technologies I work with are:
                         </p>
