@@ -189,7 +189,7 @@ const Main_index_section = ({ reverseAnimation }) => {
                         Im dedicated 
                         to turning innovative ideas into reality. Lets collaborate and bring your web projects to life with a touch of creativity and a 
                         dash of technology! Feel free to modify this text to match your personal style and preferences.
-                        Some technologies I work with are:
+                        Some technologies I work with are: 
                         </p>
                         <h3 className='font-extrabold my-4 lg:hidden px-2/100' >SKILLS</h3>
                         <ul className='flex flex-wrap pt-8 justify-around w-full bg-neutral lg:justify-between target2' id='myskills' >
