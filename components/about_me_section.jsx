@@ -51,17 +51,17 @@ const About_me_section = ({ onAnimationFinish }) => {
 
                 </motion.p>
                 <div className=' lg:ml-12/100 mt-5/100 lg:mt-0 flex justify-around'>
-                    <motion.a href='' className='flex items-center px-2 hover:text-gray-800 transition duration-500 '
+                    <motion.a href='https://pdfhost.io/v/zkl~y8NHi_Neutral_Minimalist_Professional_Resume' className='flex items-center px-2 hover:text-gray-800 transition duration-500 '
                             initial={{ opacity: 0, x: 40 }}
                             animate={isReversed ? { opacity: 0, x: 40 } :{ opacity: 1, x: 0 }}
                             transition={{ duration: 1 , delay: -0.5 }}
                     >  <FaPaperclip className='ml-4 text-3xl' /> </motion.a>
-                        <motion.a href='' className='flex items-center px-2 hover:text-gray-800 transition duration-500 '
+                        <motion.a href='https://github.com/space-clover' className='flex items-center px-2 hover:text-gray-800 transition duration-500 '
                             initial={{ opacity: 0, x: 40 }}
                             animate={isReversed ? { opacity: 0, x: 40 } :{ opacity: 1, x: 0 }}
                             transition={{ duration: 1 , delay: -0.5 }}
                         >  <FaGithubAlt className=' text-4xl' /> </motion.a>
-                        <motion.a href='' className='flex items-center px-2 hover:text-blue-800 transition duration-500 '
+                        <motion.a href='https://www.linkedin.com/in/jefry-jonathan-mejia-176476240/' className='flex items-center px-2 hover:text-blue-800 transition duration-500 '
                             initial={{ opacity: 0, x: 40 }}
                             animate={isReversed ? { opacity: 0, x: 40 } :{ opacity: 1, x: 0 }}
                             transition={{ duration: 1, delay: -0.5  }}

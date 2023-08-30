@@ -172,11 +172,11 @@ const Main_index_section = ({ reverseAnimation }) => {
                             transition={{ duration: 0.8 }}>
                             <a href="https://www.linkedin.com/in/jefry-jonathan-mejia-176476240/"><FaLinkedin className=' cursor-pointer hover:text-blue-800 text-3xl' /></a>
                             <a href="https://github.com/space-clover"><FaGithub className=' cursor-pointer hover:text-black text-3xl' /></a>
-                            <a href=""><FaClipboard className=' cursor-pointer hover:text-gray-700 text-3xl' /></a>
+                            <a href="https://pdfhost.io/v/zkl~y8NHi_Neutral_Minimalist_Professional_Resume"><FaClipboard className=' cursor-pointer hover:text-gray-700 text-3xl' /></a>
                         </motion.div>
                     </div>
 
-                    <motion.div className='lg:w-45/100 w-full flex flex-col lg:overflow-auto scrollbar-none max-h-vh-80'
+                    <motion.div className='lg:w-45/100 w-full flex flex-col lg:overflow-auto scrollbar-thin scrollbar-thumb-secondary max-h-vh-80'
                         initial={{ opacity: 0, x: 20 }}
                         animate={isReversed ? { opacity: 0, x: 20 } :{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, delay:0.7 }}>
@@ -286,6 +286,8 @@ const Main_index_section = ({ reverseAnimation }) => {
                         </ul>
                         <ul className='pt-vh-1 bg-neutral target3 ' ref={targetRef3}>
                             <ProyectCard
+                            reftoproyectlink="https://sparkling-axolotl-9db9eb.netlify.app"
+                            refttoproyect="https://github.com/space-clover/Wheater-public"
                             titulo="Wheater app"
                             descripcion="This is a React-based Weather Web App that enables users to retrieve current weather 
                             conditions and a 5-day forecast for a specific city. Users can input the city name, triggering API 
@@ -296,6 +298,8 @@ const Main_index_section = ({ reverseAnimation }) => {
                             IMG = <WiDayCloudyGusts className='text-8xl  text-orange-900'/>  />
                             <ProyectCard
                             titulo="Chat app"
+                            reftoproyectlink="https://dashing-selkie-e9942a.netlify.app"
+                            refttoproyect="https://github.com/space-clover/chatapp"
                             descripcion="Introducing an real-time chat application developed using Firebase as the 
                             primary source for instant message storage and synchronization. Integrated with the cutting-edge 
                             technologies of Next.js and Tailwind CSS, this application redefines the way users communicate.
@@ -304,6 +308,8 @@ const Main_index_section = ({ reverseAnimation }) => {
                             IMG = <SiLivechat className='text-7xl text-cyan-950'/>  />
                             <ProyectCard
                             titulo="Older Portfolio"
+                            reftoproyectlink="https://oldportafolio.netlify.app/"
+                            refttoproyect="https://github.com/space-clover/Portfolio"
                             descripcion="Allow me to introduce my personal portfolio, a unique creation crafted using 
                             the powerful combination of Tailwind CSS, HTML, and JavaScript. Each aspect of the design has 
                             been meticulously curated to showcase my work and skills in a striking manner. Leveraging the 
@@ -319,6 +325,8 @@ const Main_index_section = ({ reverseAnimation }) => {
                             etiquetas={etiquetasProyecto1} 
                             IMG = <FaSpotify className=' text-green-950 cursor-pointer hover:text-gray-700 text-7xl' /> />
                         </ul>
+                        <p>Loosely designed in Figma and coded in Visual Studio Code by yours truly. Built with Next.js 
+                        Framer-Motion and Tailwind CSS, deployed with Netlify.</p>
                     </motion.div>
                 </div>
         </section>
