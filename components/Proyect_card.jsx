@@ -14,7 +14,7 @@ const ProyectCard = ({ titulo, descripcion, etiquetas, IMG, reftoproyectlink, re
             <div className="lg:w-1/4 px-2 flex lg:items-center justify-center"> {IMG}  </div>
             <div className='lg:w-3/4'>
                 <h3 className='text-lg py-1/100 flex items-center text-dark font-bold'>{titulo} 
-                <a href={reftoproyectlink}><FaLink className=' text-md mx-2 hover:text-blue-500 transition cursor-pointer duration-500'/></a> 
+                <a href={reftoproyectlink}><FaLink className=' text-md mx-2 hover:text-gray-500 transition cursor-pointer duration-500'/></a> 
                 <a href={refttoproyect}> <FaGithub className=' text-xl mx-1 hover:text-black transition cursor-pointer duration-500'/></a> </h3>
                 <p className='text-sm text-primary mt-2 text-justify' >{descripcion}</p>
                 <ul className='flex  w-full mt-3 flex-wrap '>
