@@ -99,7 +99,7 @@ const Main_index_section = ({ reverseAnimation }) => {
             } 
             
     return (
-        <section className=' flex flex-col  justify-center w-full text-tertiary'>
+        <section className=' flex flex-col justify-center w-full text-tertiary'>
                 <motion.header className='hidden lg:flex absolute top-5 left-5  w-full h-auto'
                         initial={{ opacity: 0, y: -20 }}
                         animate={isReversed ? { opacity: 0, y: -20 } :{ opacity: 1, y: 0 }}

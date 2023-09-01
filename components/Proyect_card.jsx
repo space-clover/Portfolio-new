@@ -2,15 +2,15 @@ import React from 'react';
 import {FaArrowUp, FaArrowsAlt, FaDownload, FaGithub, FaGithubSquare, FaLink, FaLongArrowAltUp, FaSquarespace } from 'react-icons/fa';
 const { motion } = require("framer-motion");
 
-const ProyectCard = ({ titulo, descripcion, etiquetas, IMG, reftoproyectlink, refttoproyect}) => {
+const ProyectCard = ({ titulo, descripcion, etiquetas, IMG, reftoproyectlink, refttoproyect, }) => {
     const hoverAnimation = {
         scale: 1.1,
         transition: { duration: 0.3 },
     };
 
     return (
-        <motion.div className='lg:flex w-full h-auto px-4 py-3  hover:bg-slate-400 hover:bg-opacity-10  
-        hover:shadow-md hover:shadow-slate-400  transition duration-300 rounded-xl my-4'> 
+        <motion.div className=' lg:flex w-full h-auto px-4 py-3  hover:bg-slate-400 hover:bg-opacity-10  
+        hover:shadow-md hover:shadow-slate-400  transition duration-300 rounded-xl my-4'>
             <div className="lg:w-1/4 px-2 flex lg:items-center justify-center"> {IMG}  </div>
             <div className='lg:w-3/4'>
                 <h3 className='text-lg py-1/100 flex items-center text-dark font-bold'>{titulo} 
