@@ -1,9 +1,10 @@
 "use client";
 import React, {useState, useEffect, useRef} from 'react'
-import { FaAd, FaArrowAltCircleLeft, FaClipboard, FaClock, FaCss3, FaFigma, FaGit, FaGitAlt, FaGithub, FaHome, FaHtml5, FaLinkedin, FaRegStickyNote, FaSpotify, FaUser } from 'react-icons/fa';
+import { FaAd, FaArrowAltCircleLeft, FaArrowAltCircleUp, FaClipboard, FaClock, FaCss3, FaFigma, FaGit, FaGitAlt, FaGithub, FaHome, FaHtml5, FaLinkedin, FaRegStickyNote, FaSpotify, FaUser } from 'react-icons/fa';
 const { motion, SwitchLayoutGroupContext } = require("framer-motion");
 import ProyectCard from './Proyect_card';
 import { SiAxios, SiFirebase, SiFramer, SiJavascript, SiLivechat, SiNextdotjs, SiReact, SiTailwindcss, SiWordpress } from "react-icons/si";
+import { GiSettingsKnobs, IconName } from "react-icons/gi";
 import Skill_card from './Skill_card';
 import { WiDayCloudyGusts } from "react-icons/wi";
 import { AiFillLayout } from "react-icons/ai";
@@ -16,7 +17,6 @@ const Main_index_section = ({ reverseAnimation }) => {
     const [isAnimating2, setIsAnimating2] = useState(false);
     const [isAnimating3, setIsAnimating3] = useState(false);
     const [isReversed, setIsReversed] = useState(false);
-    const [isHovered, setIsHovered] = useState(false);
     const targetRef1 = useRef(null);
     const targetRef2 = useRef(null)
     const targetRef3 = useRef(null)
@@ -103,6 +103,7 @@ const Main_index_section = ({ reverseAnimation }) => {
             
     return (
         <section className=' flex flex-col justify-center w-full text-tertiary'>
+
                 <motion.header className='hidden lg:flex absolute top-5 left-5  w-full h-auto'
                         initial={{ opacity: 0, y: -20 }}
                         animate={isReversed ? { opacity: 0, y: -20 } :{ opacity: 1, y: 0 }}
@@ -349,6 +350,7 @@ const Main_index_section = ({ reverseAnimation }) => {
                         Framer-Motion and Tailwind CSS, deployed with Netlify.</p>
                     </motion.div>
                 </div>
+
         </section>
     )
 }
