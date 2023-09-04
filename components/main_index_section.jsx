@@ -118,7 +118,7 @@ const Main_index_section = ({ reverseAnimation }) => {
                             transition={{ duration: 0.8 }}>Skills and proyects
                         </motion.h1>
                         <motion.p 
-                        className='lg:w-60/100 text-md text-tertiary lg:ml-14/100 ml-5/100  mt-4 '
+                        className='lg:w-60/100 text-md 2xl:text-lg text-tertiary lg:ml-14/100 ml-5/100  mt-4 '
                         initial={{ opacity: 0, x: -20 }}
                         animate={isReversed ? { opacity: 0, x: -20 } :{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, delay:0.6 }}>
@@ -129,7 +129,7 @@ const Main_index_section = ({ reverseAnimation }) => {
                                 initial={{ opacity: 0, y: -20 }}
                                 animate={isReversed ? { opacity: 0, y: -20 } :{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.4, delay:0.5 }}>
-                                <div className="items-center font-semibold w-max-auto flex p-1 cursor-pointer"
+                                <div className="items-center font-semibold w-max-auto 2xl:text-lg flex p-1 cursor-pointer"
                                     onMouseEnter={varianfunctionforbar}
                                     onMouseLeave={varianfunctionforbar}
                                     onClick={scrolltarget1} >
@@ -141,7 +141,7 @@ const Main_index_section = ({ reverseAnimation }) => {
                                     />
                                     About
                                 </div>
-                                <div className="flex items-center font-semibold mt-3/100 p-1 cursor-pointer"
+                                <div className="flex items-center font-semibold mt-3/100 2xl:text-lg p-1 cursor-pointer"
                                     onMouseEnter={varianfunctionforbar2}
                                     onMouseLeave={varianfunctionforbar2}
                                     onClick={scrolltarget2}
@@ -154,7 +154,7 @@ const Main_index_section = ({ reverseAnimation }) => {
                                     />
                                     Skills 
                                 </div>
-                                <div className="flex items-center font-semibold mt-3/100 p-1 cursor-pointer"
+                                <div className="flex items-center font-semibold 2xl:text-lg mt-3/100 p-1 cursor-pointer"
                                     onMouseEnter={varianfunctionforbar3}
                                     onMouseLeave={varianfunctionforbar3}
                                     onClick={scrolltarget3}
@@ -201,7 +201,7 @@ const Main_index_section = ({ reverseAnimation }) => {
                         animate={isReversed ? { opacity: 0, x: 20 } :{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, delay:0.7 }}>
                         <h3 className='font-extrabold mb-4 lg:hidden px-2/100' >ABOUT</h3>
-                        <p className=' text-justify px-2/100 target1 ' ref={targetRef1} >
+                        <p className=' text-justify px-2/100 target1 2xl:text-lg ' ref={targetRef1} >
                         Hey there!, a web developer fueled by a passion for crafting visually appealing
                         and dynamic digital experiences. Proficient in technologies like Tailwind CSS, Next.js, Axios and Framer Motion, I specialize in
                         creating seamless user interfaces that captivate and engage. With a love for clean code and an eye for design, 
@@ -304,7 +304,7 @@ const Main_index_section = ({ reverseAnimation }) => {
                                 select colors, typography, and graphic elements cohesively and harmoniously. This involves understanding 
                                 how to combine visual elements to convey the desired message and create a strong visual identity"/>
                         </ul>
-                        <ul className='pt-vh-1 bg-neutral target3 ' ref={targetRef3}>
+                        <ul className='pt-vh-1  bg-neutral target3 ' ref={targetRef3}>
                             <ProyectCard
                             reftoproyectlink="https://sparkling-axolotl-9db9eb.netlify.app"
                             refttoproyect="https://github.com/space-clover/Wheater-public"
@@ -345,7 +345,7 @@ const Main_index_section = ({ reverseAnimation }) => {
                             etiquetas={etiquetasProyecto1} 
                             IMG = <FaSpotify className=' text-green-950 cursor-pointer hover:text-gray-700 text-7xl' /> />
                         </ul>
-                        <p>Loosely designed in Figma and coded in Visual Studio Code by yours truly. Built with Next.js 
+                        <p className='2xl:text-md'>Loosely designed in Figma and coded in Visual Studio Code by yours truly. Built with Next.js 
                         Framer-Motion and Tailwind CSS, deployed with Netlify.</p>
                     </motion.div>
                 </div>
