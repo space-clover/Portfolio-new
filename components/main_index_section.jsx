@@ -16,6 +16,7 @@ const Main_index_section = ({ reverseAnimation }) => {
     const [isAnimating2, setIsAnimating2] = useState(false);
     const [isAnimating3, setIsAnimating3] = useState(false);
     const [isReversed, setIsReversed] = useState(false);
+    const [isHovered, setIsHovered] = useState(false);
     const targetRef1 = useRef(null);
     const targetRef2 = useRef(null)
     const targetRef3 = useRef(null)
@@ -97,6 +98,8 @@ const Main_index_section = ({ reverseAnimation }) => {
             if (targetElement) {
                 targetElement.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });}
             } 
+
+
             
     return (
         <section className=' flex flex-col justify-center w-full text-tertiary'>
@@ -115,7 +118,7 @@ const Main_index_section = ({ reverseAnimation }) => {
                             transition={{ duration: 0.8 }}>Skills and proyects
                         </motion.h1>
                         <motion.p 
-                        className='lg:w-60/100 text-md text-tertiary lg:ml-14/100 ml-5/100  mt-4  '
+                        className='lg:w-60/100 text-md text-tertiary lg:ml-14/100 ml-5/100  mt-4 '
                         initial={{ opacity: 0, x: -20 }}
                         animate={isReversed ? { opacity: 0, x: -20 } :{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, delay:0.6 }}>
@@ -170,12 +173,29 @@ const Main_index_section = ({ reverseAnimation }) => {
                             initial={{ opacity: 0, y: 20 }}
                             animate={ isReversed ? { opacity: 0, y: 20 } :{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8 }}>
-                            <a href="https://www.linkedin.com/in/jefry-jonathan-mejia-176476240/"><FaLinkedin className=' cursor-pointer hover:text-blue-800 text-3xl' /></a>
-                            <a href="https://github.com/space-clover"><FaGithub className=' cursor-pointer hover:text-black text-3xl' /></a>
-                            <a href="https://pdfhost.io/v/zkl~y8NHi_Neutral_Minimalist_Professional_Resume"><FaClipboard className=' cursor-pointer hover:text-gray-700 text-3xl' /></a>
+                            <a href="https://www.linkedin.com/in/jefry-jonathan-mejia-176476240/" className="group flex flex-col items-center">
+                                <FaLinkedin className="cursor-pointer hover:text-blue-800 text-3xl group-hover:text-opacity-100 group-hover:scale-100 transform scale-90 transition-transform duration-300" />
+                                <div className="absolute hidden group-hover:block bg-gray-800 bg-opacity-60 text-white py-2 px-1 
+                                rounded whitespace-nowrap transition-opacity duration-300  mt-9">
+                                    LinkedIn
+                                </div>
+                            </a>
+                            <a href="https://github.com/space-clover" className="group flex flex-col items-center">
+                                <FaGithub className="cursor-pointer hover:text-black text-3xl group-hover:text-opacity-100 group-hover:scale-100 transform scale-90 transition-transform duration-300" />
+                                <div className="absolute hidden group-hover:block bg-gray-800 bg-opacity-60 text-white py-2 px-1 
+                                    rounded whitespace-nowrap transition-opacity duration-300  mt-9">
+                                    GitHub
+                                </div>
+                            </a>
+                            <a href="https://pdfhost.io/v/zkl~y8NHi_Neutral_Minimalist_Professional_Resume" className="group flex flex-col items-center">
+                                <FaClipboard className="cursor-pointer hover:text-gray-700 text-3xl group-hover:text-opacity-100 group-hover:scale-100 transform scale-90 transition-transform duration-300" />
+                                <div className="absolute hidden text-center group-hover:block bg-gray-800 bg-opacity-60 text-white py-2 px-1.5 
+                                    rounded whitespace-nowrap transition-opacity duration-300  mt-9">
+                                    Resume
+                                </div>
+                            </a>
                         </motion.div>
                     </div>
-
                     <motion.div className='lg:w-45/100 w-full flex flex-col lg:overflow-auto scrollbar-thin scrollbar-thumb-secondary max-h-vh-80'
                         initial={{ opacity: 0, x: 20 }}
                         animate={isReversed ? { opacity: 0, x: 20 } :{ opacity: 1, x: 0 }}
