@@ -307,13 +307,6 @@ const Main_index_section = ({ reverseAnimation }) => {
                         </ul>
                         <ul className='pt-vh-1  bg-neutral target3 ' ref={targetRef3}>
                             <ProyectCard
-                            reftoproyectlink="https://gleeful-speculoos-003b1f.netlify.app"
-                            titulo="Sneaker-shop"
-                            descripcion="This web project is in an early development phase, and I appreciate any 
-                            feedback and suggestions that can contribute to its improvement. It represents an exciting opportunity
-                            to further explore and develop my skills in web design and development. Your feedback is welcome and greatly valued!"
-                            IMG = <FaShoePrints className='text-8xl  text-green-800'/>  />
-                            <ProyectCard
                             reftoproyectlink="https://sparkling-axolotl-9db9eb.netlify.app"
                             refttoproyect="https://github.com/space-clover/Wheater-public"
                             titulo="Wheater app"
