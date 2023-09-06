@@ -1,6 +1,6 @@
 "use client";
 import React, {useState, useEffect, useRef} from 'react'
-import { FaAd, FaArrowAltCircleLeft, FaArrowAltCircleUp, FaClipboard, FaClock, FaCss3, FaFigma, FaGit, FaGitAlt, FaGithub, FaHome, FaHtml5, FaLinkedin, FaRegStickyNote, FaSpotify, FaUser } from 'react-icons/fa';
+import { FaAd, FaArrowAltCircleLeft, FaArrowAltCircleUp, FaClipboard, FaClock, FaCss3, FaFigma, FaGit, FaGitAlt, FaGithub, FaHome, FaHtml5, FaLinkedin, FaRegStickyNote, FaShoePrints, FaSpotify, FaUser } from 'react-icons/fa';
 const { motion, SwitchLayoutGroupContext } = require("framer-motion");
 import ProyectCard from './Proyect_card';
 import { SiAxios, SiFirebase, SiFramer, SiJavascript, SiLivechat, SiNextdotjs, SiReact, SiTailwindcss, SiWordpress } from "react-icons/si";
@@ -306,6 +306,13 @@ const Main_index_section = ({ reverseAnimation }) => {
                                 how to combine visual elements to convey the desired message and create a strong visual identity"/>
                         </ul>
                         <ul className='pt-vh-1  bg-neutral target3 ' ref={targetRef3}>
+                            <ProyectCard
+                            reftoproyectlink="https://gleeful-speculoos-003b1f.netlify.app"
+                            titulo="Sneaker-shop"
+                            descripcion="This web project is in an early development phase, and I appreciate any 
+                            feedback and suggestions that can contribute to its improvement. It represents an exciting opportunity
+                            to further explore and develop my skills in web design and development. Your feedback is welcome and greatly valued!"
+                            IMG = <FaShoePrints className='text-8xl  text-green-800'/>  />
                             <ProyectCard
                             reftoproyectlink="https://sparkling-axolotl-9db9eb.netlify.app"
                             refttoproyect="https://github.com/space-clover/Wheater-public"
