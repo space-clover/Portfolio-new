@@ -315,7 +315,7 @@ const Main_index_section = ({ reverseAnimation }) => {
                             development and web design skills. Inspired by the homepage of a sneaker 
                             store, this creation blends eye-catching visuals with elegant functionality."
                             etiquetas={etiquetasProyecto4}
-                            IMG="/./Sneaker_web"
+                            IMG="/./Sneaker_web.png"
                             />
                             <ProyectCard
                             reftoproyectlink="https://sparkling-axolotl-9db9eb.netlify.app"
