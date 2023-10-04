@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import {FaArrowUp, FaArrowsAlt, FaDownload, FaGithub, FaGithubSquare, FaLink, FaLongArrowAltUp, FaSquarespace } from 'react-icons/fa';
 const { motion } = require("framer-motion");
 
@@ -9,10 +10,18 @@ const ProyectCard = ({ titulo, descripcion, etiquetas, IMG, reftoproyectlink, re
     };
 
     return (
-        <motion.div className=' lg:flex w-full h-auto px-4 py-3  hover:bg-slate-400 hover:bg-opacity-10  
+        <motion.div className=' lg:flex w-full h-auto px-4 py-3  hover:bg-slate-400 group hover:bg-opacity-10  
         hover:shadow-md hover:shadow-slate-400  transition duration-300 rounded-xl my-4'>
-            <div className="lg:w-1/4 px-2 flex lg:items-center justify-center"> {IMG}  </div>
-            <div className='lg:w-3/4'>
+            <div className='lg:w-30/100 px-2 flex lg:items-start py-4 justify-center lg:justify-start'>
+            <Image
+                src={IMG}
+                className=' border-primary border-4 border-opacity-5 group-hover:border-opacity-10 transition duration-300 rounded-md ' 
+                alt="project"
+                width={150} 
+                height={100}/>
+            </div>
+
+            <div className='lg:w-70/100'>
                 <h3 className='text-lg 2xl:text-xl py-1/100 flex items-center text-dark font-bold'>{titulo} 
                 <a href={reftoproyectlink}><FaLink className=' text-md mx-2 hover:text-gray-500 transition cursor-pointer duration-500'/></a> 
                 <a href={refttoproyect}> <FaGithub className=' text-xl mx-1 hover:text-black transition cursor-pointer duration-500'/></a> </h3>

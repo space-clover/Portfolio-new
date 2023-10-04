@@ -197,7 +197,7 @@ const Main_index_section = ({ reverseAnimation }) => {
                             </a>
                         </motion.div>
                     </div>
-                    <motion.div className='lg:w-45/100 w-full flex flex-col lg:overflow-auto scrollbar-thin scrollbar-thumb-secondary max-h-vh-80'
+                    <motion.div className='lg:w-47/100 w-full flex flex-col lg:overflow-auto scrollbar-thin scrollbar-thumb-secondary max-h-vh-80'
                         initial={{ opacity: 0, x: 20 }}
                         animate={isReversed ? { opacity: 0, x: 20 } :{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, delay:0.7 }}>
@@ -315,8 +315,9 @@ const Main_index_section = ({ reverseAnimation }) => {
                             requests to OpenWeatherMap. The application uses state management via the useState hook to handle 
                             weather data, forecasts, highlights, and error messages. The user interface is divided 
                             into sections for search and current weather display, alongside a forecast and highlights section. "
-                            etiquetas={etiquetasProyecto1}   
-                            IMG = <WiDayCloudyGusts className='text-8xl  text-orange-900'/>  />
+                            etiquetas={etiquetasProyecto1}
+                            IMG="/./Climate_web.png"
+                            />
                             <ProyectCard
                             titulo="Chat app"
                             reftoproyectlink="https://dashing-selkie-e9942a.netlify.app"
@@ -326,7 +327,8 @@ const Main_index_section = ({ reverseAnimation }) => {
                             technologies of Next.js and Tailwind CSS, this application redefines the way users communicate.
                             Leveraging Firebase Realtime Database, messages are delivered and updated instantly across devices. "
                             etiquetas={etiquetasProyecto2} 
-                            IMG = <SiLivechat className='text-7xl text-cyan-950'/>  />
+                            IMG="/./Chat_web.png"
+                            />
                             <ProyectCard
                             titulo="Older Portfolio"
                             reftoproyectlink="https://oldportafolio.netlify.app/"
@@ -337,14 +339,8 @@ const Main_index_section = ({ reverseAnimation }) => {
                             flexibility of Tailwind CSS, 
                             I've achieved a modern and highly customized interface that seamlessly adapts to various devices.  "
                             etiquetas={etiquetasProyecto3} 
-                            IMG = <AiFillLayout className='text-8xl text-red-950 '/>  />
-                            <ProyectCard
-                            titulo="Spotify Profile"
-                            descripcion="Web app for visualizing personalized Spotify data View your top artists,
-                            top tracks, recently played tracks, and detailed audio information about each track.
-                            Create and save new playlists of recommended tracks based on your existing playlists, and more."
-                            etiquetas={etiquetasProyecto1} 
-                            IMG = <FaSpotify className=' text-green-950 cursor-pointer hover:text-gray-700 text-7xl' /> />
+                            IMG="/./Portfolio_web.png"
+                            />
                         </ul>
                         <p className='2xl:text-md'>Loosely designed in Figma and coded in Visual Studio Code by yours truly. Built with Next.js 
                         Framer-Motion and Tailwind CSS, deployed with Netlify.</p>
