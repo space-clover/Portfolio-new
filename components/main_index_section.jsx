@@ -13,6 +13,7 @@ const Main_index_section = ({ reverseAnimation }) => {
     const etiquetasProyecto1 = [  "Next.js","Axios","FontAwesome","Tailwind CSS","JavaScript","OpenWeatherMap API",];
     const etiquetasProyecto2 = [    "Next.js","Firebase (Authentication and Firestore)","FontAwesome","Tailwind CSS",];
     const etiquetasProyecto3 = [    "HTML5", "FontAwesome","Tailwind CSS",];
+    const etiquetasProyecto4 = [    "HTML5", "React icons","Tailwind CSS","Framer-motion", "Javascript","Next.js"];
     const [isAnimating, setIsAnimating] = useState(false);
     const [isAnimating2, setIsAnimating2] = useState(false);
     const [isAnimating3, setIsAnimating3] = useState(false);
@@ -306,6 +307,16 @@ const Main_index_section = ({ reverseAnimation }) => {
                                 how to combine visual elements to convey the desired message and create a strong visual identity"/>
                         </ul>
                         <ul className='pt-vh-1  bg-neutral target3 ' ref={targetRef3}>
+                            <ProyectCard
+                            reftoproyectlink="https://gleeful-speculoos-003b1f.netlify.app/"
+                            refttoproyect="https://github.com/space-clover/Sneakers_Shop"
+                            titulo="Deplace Masion"
+                            descripcion="This Sneaker E-Commerce Practice Page serves as a showcase of my frontend
+                            development and web design skills. Inspired by the homepage of a sneaker 
+                            store, this creation blends eye-catching visuals with elegant functionality."
+                            etiquetas={etiquetasProyecto4}
+                            IMG="/./Sneaker_web"
+                            />
                             <ProyectCard
                             reftoproyectlink="https://sparkling-axolotl-9db9eb.netlify.app"
                             refttoproyect="https://github.com/space-clover/Wheater-public"
