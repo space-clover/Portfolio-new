@@ -1,9 +1,9 @@
 "use client";
 import React, {useState, useEffect, useRef} from 'react'
-import { FaAd, FaArrowAltCircleLeft, FaArrowAltCircleUp, FaClipboard, FaClock, FaCss3, FaFigma, FaGit, FaGitAlt, FaGithub, FaHome, FaHtml5, FaLinkedin, FaRegStickyNote, FaShoePrints, FaSpotify, FaUser } from 'react-icons/fa';
+import { FaAd, FaArrowAltCircleLeft, FaArrowAltCircleUp, FaClipboard, FaClock, FaCss3, FaDesktop, FaFigma, FaGit, FaGitAlt, FaGithub, FaHome, FaHtml5, FaLinkedin, FaRegStickyNote, FaShoePrints, FaSpotify, FaUser } from 'react-icons/fa';
 const { motion, SwitchLayoutGroupContext } = require("framer-motion");
 import ProyectCard from './Proyect_card';
-import { SiAxios, SiBootstrap, SiFirebase, SiFramer, SiIonic, SiJavascript, SiLivechat, SiNextdotjs, SiReact, SiTailwindcss, SiWordpress } from "react-icons/si";
+import { SiAxios, SiBootstrap, SiFirebase, SiFramer, SiFreedesktopdotorg, SiIonic, SiJavascript, SiLivechat, SiNextdotjs, SiPcgamingwiki, SiReact, SiTailwindcss, SiWordpress } from "react-icons/si";
 import { GiSettingsKnobs, IconName } from "react-icons/gi";
 import Skill_card from './Skill_card';
 import { WiDayCloudyGusts } from "react-icons/wi";
@@ -233,7 +233,7 @@ const Main_index_section = ({ reverseAnimation }) => {
                                     <span className="bg-gray-800 bg-opacity-60 text-white p-2 rounded"> Tailwind CSS </span>
                                 </div>
                             </li>
-                            <li className="relative inline-block hover:text-cyan-600 transition mb-2  duration-600">
+                            <li className="relative inline-block hover:text-purple-600 transition mb-2  duration-600">
                                 <SiBootstrap className='lg:text-9xl text-8xl'/>
                                 <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-100 transition duration-700">
                                     <span className="bg-gray-800 bg-opacity-60 text-white p-2 rounded"> Bootstrap</span>
@@ -242,7 +242,7 @@ const Main_index_section = ({ reverseAnimation }) => {
                             <li className="relative inline-block hover:text-cyan-600 transition mb-2  duration-600">
                                 <SiIonic className='lg:text-9xl text-8xl'/>
                                 <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-100 transition duration-700">
-                                    <span className="bg-gray-800 bg-opacity-60 text-white p-2 rounded"> <Ionic></Ionic> </span>
+                                    <span className="bg-gray-800 bg-opacity-60 text-white p-2 rounded"> Ionic </span>
                                 </div>
                             </li>
                             <li className="relative inline-block hover:text-yellow-500 transition mb-2 duration-600">
@@ -279,6 +279,12 @@ const Main_index_section = ({ reverseAnimation }) => {
                                 <SiFramer className='lg:text-9xl text-8xl'/>
                                 <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-100 transition duration-700">
                                     <span className="bg-gray-800 bg-opacity-60 text-white p-2 rounded">framer-motion</span>
+                                </div>
+                            </li>
+                            <li className="relative inline-block hover:text-gray-600 transition mb-2  duration-600">
+                                <FaDesktop className='lg:text-9xl text-8xl'/>
+                                <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-100 transition duration-700">
+                                    <span className="bg-gray-800 bg-opacity-60 text-white p-2 rounded text-center">Remote Desktop</span>
                                 </div>
                             </li>
                             <li className="relative inline-block hover:text-orange-600 transition mb-2 duration-600">
