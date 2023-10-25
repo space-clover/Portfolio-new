@@ -3,7 +3,7 @@ import React, {useState, useEffect, useRef} from 'react'
 import { FaAd, FaArrowAltCircleLeft, FaArrowAltCircleUp, FaClipboard, FaClock, FaCss3, FaDesktop, FaFigma, FaGit, FaGitAlt, FaGithub, FaHome, FaHtml5, FaLinkedin, FaRegStickyNote, FaShoePrints, FaSpotify, FaUser } from 'react-icons/fa';
 const { motion, SwitchLayoutGroupContext } = require("framer-motion");
 import ProyectCard from './Proyect_card';
-import { SiAxios, SiBootstrap, SiFirebase, SiFramer, SiFreedesktopdotorg, SiIonic, SiJavascript, SiLivechat, SiNextdotjs, SiPcgamingwiki, SiReact, SiTailwindcss, SiWordpress } from "react-icons/si";
+import { SiAxios, SiBootstrap, SiFirebase, SiFramer, SiFreedesktopdotorg, SiIonic, SiJavascript, SiLivechat, SiNextdotjs, SiNodedotjs, SiPcgamingwiki, SiReact, SiTailwindcss, SiTypescript, SiWordpress } from "react-icons/si";
 import { GiSettingsKnobs, IconName } from "react-icons/gi";
 import Skill_card from './Skill_card';
 import { WiDayCloudyGusts } from "react-icons/wi";
@@ -258,6 +258,18 @@ const Main_index_section = ({ reverseAnimation }) => {
                                     <span className="bg-gray-800 bg-opacity-60 text-white p-2 rounded"> React.js </span>
                                 </div>
                             </li>
+                            <li className="relative inline-block hover:text-blue-900 transition mb-2 duration-600">
+                                <SiTypescript className='lg:text-9xl text-8xl'/>
+                                <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-100 transition duration-700">
+                                    <span className="bg-gray-800 bg-opacity-60 text-white p-2 rounded"> Typescript </span>
+                                </div>
+                            </li>
+                            <li className="relative inline-block hover:text-green-900 transition mb-2 duration-600">
+                                <SiNodedotjs className='lg:text-9xl text-8xl'/>
+                                <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-100 transition duration-700">
+                                    <span className="bg-gray-800 bg-opacity-60 text-white p-2 rounded"> Node.js </span>
+                                </div>
+                            </li>
                             <li className="relative inline-block hover:text-purple-600 transition  mb-2 duration-600">
                                 <FaFigma className='lg:text-9xl text-8xl'/>
                                 <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-100 transition duration-700">
@@ -327,16 +339,16 @@ const Main_index_section = ({ reverseAnimation }) => {
                         </ul>
                         <ul className='pt-vh-1  bg-neutral target3 ' ref={targetRef3}>
                         <ProyectCard
-                            reftoproyectlink="https://gleeful-speculoos-003b1f.netlify.app/"
-                            refttoproyect="https://comfy-vacherin-3a5e09.netlify.app/"
+                            reftoproyectlink="https://comfy-vacherin-3a5e09.netlify.app/"
+                            refttoproyect="https://github.com/space-clover/Todo-app/tree/Local"
                             titulo="Todo App (Toritetsu)"
-                            descripcion="[App Name] is a versatile and user-friendly task management tool that allows
+                            descripcion="Toritetsu is a versatile and user-friendly task management tool that allows
                             users to efficiently create, organize, and track their tasks and to-do lists. The app was 
                             created using Next.js for the frontend, powered by Node.js on the backend, and styled with 
                             Tailwind CSS. It is designed to help users improve their productivity, 
                             effectively manage their time, and stay organized in their personal and professional life."
                             etiquetas={etiquetasProyecto5}
-                            IMG="/./Todo app.png"
+                            IMG="/./Todo_app.png"
                             />
                             <ProyectCard
                             reftoproyectlink="https://gleeful-speculoos-003b1f.netlify.app/"
