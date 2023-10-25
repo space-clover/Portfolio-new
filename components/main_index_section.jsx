@@ -14,6 +14,7 @@ const Main_index_section = ({ reverseAnimation }) => {
     const etiquetasProyecto2 = [    "Next.js","Firebase (Authentication and Firestore)","FontAwesome","Tailwind CSS",];
     const etiquetasProyecto3 = [    "HTML5", "FontAwesome","Tailwind CSS",];
     const etiquetasProyecto4 = [    "HTML5", "React icons","Tailwind CSS","Framer-motion", "Javascript","Next.js"];
+    const etiquetasProyecto5 = [    "HTML5", "React icons","Tailwind CSS","Framer-motion", "Typescript","Next.js","Node.js", "Axios", "Set time API"];
     const [isAnimating, setIsAnimating] = useState(false);
     const [isAnimating2, setIsAnimating2] = useState(false);
     const [isAnimating3, setIsAnimating3] = useState(false);
@@ -325,6 +326,18 @@ const Main_index_section = ({ reverseAnimation }) => {
                                 how to combine visual elements to convey the desired message and create a strong visual identity"/>
                         </ul>
                         <ul className='pt-vh-1  bg-neutral target3 ' ref={targetRef3}>
+                        <ProyectCard
+                            reftoproyectlink="https://gleeful-speculoos-003b1f.netlify.app/"
+                            refttoproyect="https://comfy-vacherin-3a5e09.netlify.app/"
+                            titulo="Todo App (Toritetsu)"
+                            descripcion="[App Name] is a versatile and user-friendly task management tool that allows
+                            users to efficiently create, organize, and track their tasks and to-do lists. The app was 
+                            created using Next.js for the frontend, powered by Node.js on the backend, and styled with 
+                            Tailwind CSS. It is designed to help users improve their productivity, 
+                            effectively manage their time, and stay organized in their personal and professional life."
+                            etiquetas={etiquetasProyecto5}
+                            IMG="/./Todo app.png"
+                            />
                             <ProyectCard
                             reftoproyectlink="https://gleeful-speculoos-003b1f.netlify.app/"
                             refttoproyect="https://github.com/space-clover/Sneakers_Shop"
